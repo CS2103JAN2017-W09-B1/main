@@ -52,8 +52,10 @@ public class MainWindow extends UiPart<Region> {
     @FXML
     private AnchorPane commandBoxPlaceholder;
 
+    /*
     @FXML
     private MenuItem helpMenuItem;
+    */
 
     @FXML
     private AnchorPane nonFloatingTaskListPanelPlaceholder;
@@ -86,7 +88,7 @@ public class MainWindow extends UiPart<Region> {
         Scene scene = new Scene(getRoot());
         primaryStage.setScene(scene);
 
-        setAccelerators();
+        //setAccelerators();
         registerAsAnEventHandler(this);
     }
 
@@ -94,17 +96,20 @@ public class MainWindow extends UiPart<Region> {
         return primaryStage;
     }
 
+    /*
     private void setAccelerators() {
         setAccelerator(helpMenuItem, KeyCombination.valueOf("F1"));
     }
+    */
 
     /**
      * Sets the accelerator of a MenuItem.
      * @param keyCombination the KeyCombination value of the accelerator
      */
+    /*
     private void setAccelerator(MenuItem menuItem, KeyCombination keyCombination) {
         menuItem.setAccelerator(keyCombination);
-
+*/
         /*
          * TODO: the code below can be removed once the bug reported here
          * https://bugs.openjdk.java.net/browse/JDK-8131666
@@ -120,13 +125,15 @@ public class MainWindow extends UiPart<Region> {
          * help window purposely so to support accelerators even when focus is
          * in CommandBox or ResultDisplay.
          */
-        getRoot().addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+    /*    
+    getRoot().addEventFilter(KeyEvent.KEY_PRESSED, event -> {
             if (event.getTarget() instanceof TextInputControl && keyCombination.match(event)) {
                 menuItem.getOnAction().handle(new ActionEvent());
                 event.consume();
             }
         });
     }
+    */
 
     void fillInnerParts() {
         //browserPanel = new BrowserPanel(browserPlaceholder);

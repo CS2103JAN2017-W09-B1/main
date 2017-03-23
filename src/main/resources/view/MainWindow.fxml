@@ -2,9 +2,6 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -15,33 +12,9 @@
       <URL value="@Extensions.css" />
    </stylesheets>
    <children>
-      <MenuBar VBox.vgrow="NEVER">
-         <menus>
-            <Menu mnemonicParsing="false" text="File">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHelp" text="Help" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
-      <AnchorPane fx:id="commandBoxPlaceholder" styleClass="anchor-pane-with-border" VBox.vgrow="NEVER">
-         <padding>
-            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-         </padding>
-      </AnchorPane>
-       <AnchorPane fx:id="resultDisplayPlaceholder" maxHeight="100" minHeight="100" prefHeight="100" styleClass="anchor-pane-with-border" VBox.vgrow="NEVER">
-           <padding>
-               <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-           </padding>
-       </AnchorPane>
-      <SplitPane id="splitPane" fx:id="splitPane" dividerPositions="0.4" VBox.vgrow="ALWAYS">
+      <SplitPane id="splitPane" fx:id="splitPane" dividerPositions="0.4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <items>
-            <VBox fx:id="nonFloatingTaskList" minWidth="340" prefWidth="340">
+            <VBox fx:id="nonFloatingTaskList" minWidth="340" prefWidth="340" SplitPane.resizableWithParent="false">
                 <padding>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
@@ -49,15 +22,7 @@
                   <AnchorPane fx:id="nonFloatingTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
-            <VBox fx:id="floatingTaskList" minWidth="330" prefWidth="330">
-                <padding>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                </padding>
-               <children>
-                  <AnchorPane fx:id="floatingTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
-               </children>
-            </VBox>
-            <VBox fx:id="completedTaskList" minWidth="330" prefWidth="330">
+            <VBox fx:id="completedTaskList" minWidth="330" prefWidth="330" SplitPane.resizableWithParent="false">
                 <padding>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
@@ -72,6 +37,31 @@
                 </padding>
             </AnchorPane>
             -->
+         </items>
+      </SplitPane>
+      <SplitPane id="splitPane" fx:id="splitPane1" dividerPositions="0.4" layoutX="10.0" layoutY="155.0">
+         <items>
+            <VBox fx:id="floatingTaskList" minWidth="340" prefWidth="340" SplitPane.resizableWithParent="false">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <AnchorPane fx:id="floatingTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox fx:id="floatingTaskList1" SplitPane.resizableWithParent="false">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                   <AnchorPane fx:id="resultDisplayPlaceholder" minHeight="370.0" minWidth="300.0" VBox.vgrow="NEVER" />
+                  <AnchorPane fx:id="commandBoxPlaceholder" VBox.vgrow="NEVER">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+            </VBox>
          </items>
       </SplitPane>
       <AnchorPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />

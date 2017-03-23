@@ -2,7 +2,7 @@
     -fx-background-color: derive(#1d1d1d, 20%);
 }
 
-.label {
+.label { /*Bottom useless text */
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: #555555;
