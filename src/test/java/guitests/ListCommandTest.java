@@ -1,11 +1,11 @@
 //@@author A0139539R
 package guitests;
 
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.task.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import org.junit.Test;
 
-import seedu.address.logic.commands.ListCommand;
+import seedu.task.logic.commands.ListCommand;
 
 public class ListCommandTest extends AddressBookGuiTest {
 

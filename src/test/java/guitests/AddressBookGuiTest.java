@@ -21,13 +21,13 @@ import guitests.guihandles.TaskCardHandle;
 import guitests.guihandles.TaskListPanelHandle;
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import seedu.address.TestApp;
-import seedu.address.commons.core.EventsCenter;
-import seedu.address.commons.events.BaseEvent;
-import seedu.address.model.AddressBook;
-import seedu.address.model.task.ReadOnlyTask;
-import seedu.address.testutil.TestUtil;
-import seedu.address.testutil.TypicalTestTasks;
+import seedu.task.TestApp;
+import seedu.task.commons.core.EventsCenter;
+import seedu.task.commons.events.BaseEvent;
+import seedu.task.model.TaskManager;
+import seedu.task.model.task.ReadOnlyTask;
+import seedu.task.testutil.TestUtil;
+import seedu.task.testutil.TypicalTestTasks;
 
 /**
  * A GUI Test class for AddressBook.
@@ -86,8 +86,8 @@ public abstract class AddressBookGuiTest {
      * Override this in child classes to set the initial local data.
      * Return null to use the data in the file specified in {@link #getDataFileLocation()}
      */
-    protected AddressBook getInitialData() {
-        AddressBook ab = new AddressBook();
+    protected TaskManager getInitialData() {
+        TaskManager ab = new TaskManager();
         TypicalTestTasks.loadAddressBookWithSampleData(ab);
         return ab;
     }

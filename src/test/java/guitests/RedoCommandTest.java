@@ -2,8 +2,8 @@ package guitests;
 
 import org.junit.Test;
 
-import seedu.address.logic.commands.RedoCommand;
-import seedu.address.testutil.TestTask;
+import seedu.task.logic.commands.RedoCommand;
+import seedu.task.testutil.TestTask;
 
 public class RedoCommandTest extends AddressBookGuiTest {
 

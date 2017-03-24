@@ -1,14 +1,14 @@
 package guitests;
 
 import static org.junit.Assert.assertTrue;
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.task.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import org.junit.Test;
 
-import seedu.address.commons.core.Messages;
-import seedu.address.logic.commands.IncompleteCommand;
-import seedu.address.testutil.TestTask;
-import seedu.address.testutil.TestUtil;
+import seedu.task.commons.core.Messages;
+import seedu.task.logic.commands.IncompleteCommand;
+import seedu.task.testutil.TestTask;
+import seedu.task.testutil.TestUtil;
 
 public class IncompleteCommandTest extends AddressBookGuiTest {
 
