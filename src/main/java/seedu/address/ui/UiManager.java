@@ -117,17 +117,29 @@ public class UiManager extends ComponentManager implements Ui {
     @Subscribe
     private void handleJumpToListRequestEvent(JumpToListRequestEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
-        TaskListPanel targetListPanel;
+        TaskListPanel targetListPanel = null;
+        TaskListPanelCompleted targetListPanelC = null;
+        TaskListPanelFloating targetListPanelF = null;
+        TaskListPanelOngoing targetListPanelO = null;
         switch (event.targetList) {
         case Task.TASK_NAME_COMPLETED:
-            targetListPanel = mainWindow.getCompletedTaskListPanel();
+            targetListPanelC = mainWindow.getCompletedTaskListPanel();
             break;
         case Task.TASK_NAME_FLOATING:
-            targetListPanel = mainWindow.getFloatingTaskListPanel();
+            targetListPanelF = mainWindow.getFloatingTaskListPanel();
             break;
-        default:targetListPanel = mainWindow.getNonFloatingTaskListPanel();
+        default:targetListPanelO = mainWindow.getNonFloatingTaskListPanel();
         }
-        targetListPanel.scrollTo(event.targetIndex);
+        
+        if (targetListPanelC != null) {
+            targetListPanelC.scrollTo(event.targetIndex);
+            } else if (targetListPanelF != null) {
+                targetListPanelF.scrollTo(event.targetIndex);
+            } else {
+                targetListPanelO.scrollTo(event.targetIndex);
+            }
+        
+        //targetListPanel.scrollTo(event.targetIndex);
     }
 
     @Subscribe

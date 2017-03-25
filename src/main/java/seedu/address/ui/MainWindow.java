@@ -41,9 +41,9 @@ public class MainWindow extends UiPart<Region> {
 
     // Independent Ui parts residing in this Ui container
     //private BrowserPanel browserPanel;
-    private TaskListPanel nonFloatingTaskListPanel;
-    private TaskListPanel floatingTaskListPanel;
-    private TaskListPanel completedTaskListPanel;
+    private TaskListPanelOngoing nonFloatingTaskListPanel;
+    private TaskListPanelFloating floatingTaskListPanel;
+    private TaskListPanelCompleted completedTaskListPanel;
     private Config config;
 
     @FXML
@@ -139,15 +139,15 @@ public class MainWindow extends UiPart<Region> {
 
     void fillInnerParts() {
         //browserPanel = new BrowserPanel(browserPlaceholder);
-        nonFloatingTaskListPanel = new TaskListPanel(
+        nonFloatingTaskListPanel = new TaskListPanelOngoing(
                 getNonFloatingTaskListPlaceholder(),
                 logic.getFilteredNonFloatingTaskList()
                 );
-        floatingTaskListPanel = new TaskListPanel(
+        floatingTaskListPanel = new TaskListPanelFloating(
                 getFloatingTaskListPlaceholder(),
                 logic.getFilteredFloatingTaskList()
                 );
-        completedTaskListPanel = new TaskListPanel(
+        completedTaskListPanel = new TaskListPanelCompleted(
                 getCompletedTaskListPlaceholder(),
                 logic.getFilteredCompletedTaskList()
                 );
@@ -241,15 +241,15 @@ public class MainWindow extends UiPart<Region> {
         raise(new ExitAppRequestEvent());
     }
 
-    public TaskListPanel getNonFloatingTaskListPanel() {
+    public TaskListPanelOngoing getNonFloatingTaskListPanel() {
         return this.nonFloatingTaskListPanel;
     }
 
-    public TaskListPanel getFloatingTaskListPanel() {
+    public TaskListPanelFloating getFloatingTaskListPanel() {
         return this.floatingTaskListPanel;
     }
 
-    public TaskListPanel getCompletedTaskListPanel() {
+    public TaskListPanelCompleted getCompletedTaskListPanel() {
         return this.completedTaskListPanel;
     }
   //@@author A0144813J
@@ -257,15 +257,15 @@ public class MainWindow extends UiPart<Region> {
     public void handleAddressBookChangedEvent(AddressBookChangedEvent abce) {
         if (abce.floatingTasks != null && abce.nonFloatingTasks != null) {
             logger.info(LogsCenter.getEventHandlingLogMessage(abce, "State change acknowledged."));
-            nonFloatingTaskListPanel = new TaskListPanel(
+            nonFloatingTaskListPanel = new TaskListPanelOngoing(
                     getNonFloatingTaskListPlaceholder(),
                     abce.nonFloatingTasks
                     );
-            floatingTaskListPanel = new TaskListPanel(
+            floatingTaskListPanel = new TaskListPanelFloating(
                     getFloatingTaskListPlaceholder(),
                     abce.floatingTasks
                     );
-            completedTaskListPanel = new TaskListPanel(
+            completedTaskListPanel = new TaskListPanelCompleted(
                     getCompletedTaskListPlaceholder(),
                     abce.completedTasks
                     );

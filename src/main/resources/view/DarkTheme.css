@@ -310,6 +310,33 @@
     -fx-text-fill: white;
 }
 
+.list-cell-ongoing { /* <=== changed to even */
+    -fx-background-color: #33cc66;
+}
+
+.list-cell-ongoing:filled:selected:focused {
+    -fx-background-color: #b7b7b7;
+    -fx-text-fill: white;
+}
+
+.list-cell-completed { /* <=== changed to even */
+    -fx-background-color: #ff6666;
+}
+
+.list-cell-completed:filled:selected:focused {
+    -fx-background-color: #b7b7b7;
+    -fx-text-fill: white;
+}
+
+.list-cell-floating { /* <=== changed to even */
+    -fx-background-color: #ffcc66;
+}
+
+.list-cell-floating:filled:selected:focused {
+    -fx-background-color: #b7b7b7;
+    -fx-text-fill: white;
+}
+
 .text-area {
     -fx-background-insets: 0;
     -fx-background-color: transparent, white, transparent, white;
