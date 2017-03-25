@@ -5,6 +5,9 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
@@ -14,19 +17,37 @@
    <children>
       <SplitPane id="splitPane" fx:id="splitPane" dividerPositions="0.4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <items>
-            <VBox fx:id="nonFloatingTaskList" minWidth="340" prefWidth="340" SplitPane.resizableWithParent="false">
+            <VBox fx:id="nonFloatingTaskList" minWidth="340" prefWidth="340" style="-fx-background-color: #33cc66; -fx-border-color: transparent;" SplitPane.resizableWithParent="false">
                 <padding>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
                <children>
+                  <TextFlow maxWidth="78.0" prefHeight="0.0" prefWidth="91.0" style="-fx-background-color: #333333;">
+                     <children>
+                        <Text fill="#33cc66" strokeType="OUTSIDE" strokeWidth="0.0" text="Ongoing" wrappingWidth="97.5390625">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
                   <AnchorPane fx:id="nonFloatingTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
-            <VBox fx:id="completedTaskList" minWidth="330" prefWidth="330" SplitPane.resizableWithParent="false">
+            <VBox fx:id="completedTaskList" minWidth="330" prefWidth="330" style="-fx-background-color: #ff6666; -fx-border-color: transparent;" SplitPane.resizableWithParent="false">
                 <padding>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
                <children>
+                  <TextFlow maxWidth="102.0" prefHeight="8.0" prefWidth="102.0" style="-fx-background-color: #333333;">
+                     <children>
+                        <Text fill="#ff6666" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed" wrappingWidth="95.48046875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
                   <AnchorPane fx:id="completedTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
@@ -41,19 +62,37 @@
       </SplitPane>
       <SplitPane id="splitPane" fx:id="splitPane1" dividerPositions="0.4" layoutX="10.0" layoutY="155.0">
          <items>
-            <VBox fx:id="floatingTaskList" minWidth="340" prefWidth="340" SplitPane.resizableWithParent="false">
+            <VBox fx:id="floatingTaskList" minWidth="340" prefWidth="340" style="-fx-background-color: #ffcc66; -fx-border-color: transparent;" SplitPane.resizableWithParent="false">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
+                  <TextFlow maxWidth="75.0" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #333333;">
+                     <children>
+                        <Text fill="#ffcc66" strokeType="OUTSIDE" strokeWidth="0.0" text="Floating" wrappingWidth="167.61181640625">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
                   <AnchorPane fx:id="floatingTaskListPanelPlaceholder" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
-            <VBox fx:id="floatingTaskList1" SplitPane.resizableWithParent="false">
+            <VBox fx:id="floatingTaskList1" style="-fx-background-color: #6699cc; -fx-border-color: transparent;" SplitPane.resizableWithParent="false">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
+                  <TextFlow maxWidth="95.0" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #333333;">
+                     <children>
+                        <Text fill="#6699cc" strokeType="OUTSIDE" strokeWidth="0.0" text="Command" wrappingWidth="103.3740234375">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
                    <AnchorPane fx:id="resultDisplayPlaceholder" minHeight="370.0" minWidth="300.0" VBox.vgrow="NEVER" />
                   <AnchorPane fx:id="commandBoxPlaceholder" VBox.vgrow="NEVER">
                      <padding>
@@ -64,6 +103,5 @@
             </VBox>
          </items>
       </SplitPane>
-      <AnchorPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />
    </children>
 </VBox>

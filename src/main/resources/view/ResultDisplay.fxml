@@ -10,6 +10,6 @@
         <URL value="@Extensions.css" />
     </stylesheets>
     <AnchorPane fx:id="mainPane">
-        <TextArea fx:id="resultDisplay" editable="false" maxHeight="370.0" maxWidth="300.0" minHeight="370.0" minWidth="300.0" styleClass="result-display" />
+        <TextArea fx:id="resultDisplay" blendMode="MULTIPLY" editable="false" maxHeight="370.0" maxWidth="300.0" minHeight="370.0" minWidth="300.0" styleClass="text-area" />
     </AnchorPane>
 </AnchorPane>

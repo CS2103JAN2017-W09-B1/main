@@ -274,7 +274,7 @@
 
 #cardPane {
     -fx-background-color: transparent;
-    -fx-border-color: #d6d6d6;
+    /*-fx-border-color: #d6d6d6;*/
     -fx-border-width: 1 1 1 1;
 }
 
@@ -300,3 +300,38 @@
     -fx-background-radius: 2;
     -fx-font-size: 11;
 }
+
+.list-cell { /* <=== changed to even */
+    -fx-background-color: transparent;
+}
+
+.list-cell:filled:selected:focused {
+    -fx-background-color: #b7b7b7;
+    -fx-text-fill: white;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+
+
