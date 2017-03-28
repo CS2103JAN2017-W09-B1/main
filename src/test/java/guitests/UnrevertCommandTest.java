@@ -9,7 +9,7 @@ import seedu.task.logic.commands.UnrevertCommand;
 import seedu.task.testutil.TestTask;
 import seedu.task.testutil.TestUtil;
 
-public class UnrevertCommandTest extends AddressBookGuiTest {
+public class UnrevertCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void unrevert_emptySession_failure() {

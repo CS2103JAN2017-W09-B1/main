@@ -20,7 +20,7 @@ public class SampleDataUtilTest {
 
     @Test
     public void getSampleAddressBookTest() {
-        ReadOnlyTaskManager sampleAB = SampleDataUtil.getSampleAddressBook();
+        ReadOnlyTaskManager sampleAB = SampleDataUtil.getSampleTaskManager();
         assertNotNull(sampleAB);
         assertTrue(sampleAB.getTaskList().size() == 6);
     }

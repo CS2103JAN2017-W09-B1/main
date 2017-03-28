@@ -11,7 +11,7 @@ import seedu.task.logic.commands.CompleteCommand;
 import seedu.task.testutil.TaskBuilder;
 import seedu.task.testutil.TestTask;
 
-public class CompleteCommandTest extends AddressBookGuiTest {
+public class CompleteCommandTest extends TaskManagerGuiTest {
 
     TestTask[] originalTaskList = td.getTypicalTasks();
 

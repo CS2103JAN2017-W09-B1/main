@@ -5,7 +5,7 @@ import org.junit.Test;
 import seedu.task.logic.commands.RedoCommand;
 import seedu.task.testutil.TestTask;
 
-public class RedoCommandTest extends AddressBookGuiTest {
+public class RedoCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void redo_emptySession_failure() {

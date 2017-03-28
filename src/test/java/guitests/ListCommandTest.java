@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import seedu.task.logic.commands.ListCommand;
 
-public class ListCommandTest extends AddressBookGuiTest {
+public class ListCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void list_not_supported_failure() {

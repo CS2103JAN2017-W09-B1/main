@@ -6,7 +6,7 @@ import seedu.task.logic.commands.RevertCommand;
 import seedu.task.logic.commands.UndoCommand;
 import seedu.task.testutil.TestTask;
 
-public class RevertCommandTest extends AddressBookGuiTest {
+public class RevertCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void revert_emptySession_failure() {

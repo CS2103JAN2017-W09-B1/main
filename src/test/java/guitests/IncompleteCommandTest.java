@@ -10,7 +10,7 @@ import seedu.task.logic.commands.IncompleteCommand;
 import seedu.task.testutil.TestTask;
 import seedu.task.testutil.TestUtil;
 
-public class IncompleteCommandTest extends AddressBookGuiTest {
+public class IncompleteCommandTest extends TaskManagerGuiTest {
 
     TestTask[] originalTaskList = td.getTypicalTasks();
 

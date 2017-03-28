@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addressbook>
+<taskmanager>
     <tasks>
     	<title>Buy Groceries</title>
     	<date>07032017</date>
@@ -9,4 +9,4 @@
     	<title>Do CS2103T</title>
     	<date>05032017</date>
     	<priority>quite.urgent</priority>
-    	<instruction>update tests</instruction></tasks></addressbook>
+    	<instruction>update tests</instruction></tasks></taskmanager>

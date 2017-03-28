@@ -3,7 +3,7 @@ package guitests;
 import seedu.task.model.TaskManager;
 import seedu.task.testutil.TestUtil;
 
-public class SampleDataTest extends AddressBookGuiTest {
+public class SampleDataTest extends TaskManagerGuiTest {
     @Override
     protected TaskManager getInitialData() {
         // return null to force test app to load data from file only

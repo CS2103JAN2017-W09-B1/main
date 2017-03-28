@@ -5,7 +5,7 @@ import org.junit.Test;
 import seedu.task.logic.commands.UndoCommand;
 import seedu.task.testutil.TestTask;
 
-public class UndoCommandTest extends AddressBookGuiTest {
+public class UndoCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void undo_emptySession_failure() {
