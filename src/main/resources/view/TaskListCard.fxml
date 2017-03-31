@@ -3,7 +3,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
@@ -13,58 +12,42 @@
 
 <HBox id="cardPane" fx:id="cardPane" maxHeight="110.0" minWidth="350.0" style="-fx-border-color: black; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <FlowPane fx:id="recurringTag" minWidth="350.0" style="-fx-background-color: transparent;">
-         <children>
-            <TitledPane expanded="false" minWidth="450.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" stylesheets="@DarkTheme.css" wrapText="true">
-               <content>
-                    <GridPane maxHeight="60.0" minHeight="60.0" translateX="40.0">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
-                        </columnConstraints>
-                        <children>
-                            <VBox alignment="CENTER_LEFT" translateY="-10.0">
-                                <stylesheets>
-                                    <URL value="@DarkTheme.css" />
-                                    <URL value="@Extensions.css" />
-                                </stylesheets>
-                                <padding>
-                                    <Insets left="15.0" right="5.0" />
-                                </padding>
-            
-                                                        <children>
-                                    <HBox alignment="CENTER_LEFT" spacing="5" style="-fx-background-color: transparent; -fx-border-color: transparent;">
-                                        <children>
-                                            <HBox style="-fx-background-color: transparent; -fx-border-color: transparent;" />
-                                        </children>
-                                    </HBox>
-                                    <Label fx:id="instruction" styleClass="cell_small_label_instruction" text="\$instruction" />
-                                    <Label fx:id="priority" styleClass="cell_small_label_priority" text="\$priority" />
-                                </children>
-                            </VBox>
-                        </children>
-                     <rowConstraints>
-                        <RowConstraints />
-                     </rowConstraints>
-                    </GridPane>
-               </content>
-               <graphic>
-                  <FlowPane fx:id="eventTag" maxWidth="50.0" prefWrapLength="350.0" styleClass="events" stylesheets="@DarkTheme.css" translateX="35.0">
-                     <children>
-                              <FlowPane fx:id="tags" prefWrapLength="350.0" translateX="-35.0">
+        <GridPane maxHeight="60.0" minHeight="60.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            </columnConstraints>
+            <children>
+                <VBox alignment="CENTER_LEFT" translateY="-10.0">
+                    <stylesheets>
+                        <URL value="@DarkTheme.css" />
+                        <URL value="@Extensions.css" />
+                    </stylesheets>
+                    <padding>
+                        <Insets left="15.0" right="5.0" />
+                    </padding>
+
+                                                                                      <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+                            <children>
+                                <HBox style="-fx-background-color: transparent; -fx-border-color: transparent;">
                            <children>
-                                       <Label fx:id="title" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 24; -fx-font-family: Arial; -fx-font-weight: bold;" styleClass="cell_big_label" text="\$first" wrapText="true">
-                                 <graphic>
-                                             <Label fx:id="id" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-family: Arial; -fx-font-size: 24; -fx-font-weight: bold;" styleClass="cell_big_label" />
-                                 </graphic>
-                              </Label>
+                                       <Label fx:id="id" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-family: Arial; -fx-font-size: 24; -fx-font-weight: bold;" styleClass="cell_big_label" />
+                                       <Label fx:id="title" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 24; -fx-font-family: Arial; -fx-font-weight: bold;" styleClass="cell_big_label" text="\$first" wrapText="true" />
                            </children>
-                        </FlowPane>
-                              <Label fx:id="date" style="-fx-background-color: transparent; -fx-text-fill: black;" styleClass="cell_small_label_date" text="\$date" />
-                     </children>
-                  </FlowPane>
-               </graphic>
-            </TitledPane>
-         </children>
-      </FlowPane>
+                        </HBox>
+                            </children>
+                        </HBox>
+                        <FlowPane fx:id="tags" prefWrapLength="350.0" />
+                        <Label fx:id="date" style="-fx-background-color: transparent; -fx-text-fill: black;" styleClass="cell_small_label_date" text="\$date" />
+                        <Label fx:id="instruction" styleClass="cell_small_label_instruction" text="\$instruction" />
+                        <Label fx:id="priority" styleClass="cell_small_label_priority" text="\$priority" />
+                    </children>
+                </VBox>
+            </children>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+      <FlowPane fx:id="eventTag" maxWidth="50.0" prefWrapLength="350.0" styleClass="events" stylesheets="@DarkTheme.css" />
     </children>
 </HBox>

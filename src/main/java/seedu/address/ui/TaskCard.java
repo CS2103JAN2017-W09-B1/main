@@ -25,10 +25,10 @@ public class TaskCard extends UiPart<Region> {
     private Label priority;
     @FXML
     private FlowPane tags;
-    @FXML
-    private FlowPane recurringTag;
-    @FXML
-    private FlowPane eventTag;
+    /*@FXML
+    private FlowPane recurringTag;*/
+    /*@FXML
+    private FlowPane eventTag;*/
 
     public TaskCard(ReadOnlyTask task, int displayedIndex) {
         super(FXML);
@@ -39,26 +39,26 @@ public class TaskCard extends UiPart<Region> {
         priority.setText(task.getPriority().toString());
         initTags(task);
         
-        if(task.getDeadline().isRecurring()) {
+        /*if(task.getDeadline().isRecurring()) {
             initRecurTag();
-        }
-        if(task.getDeadline().isFromTo()) {
+        }*/
+        /*if(task.getDeadline().isFromTo()) {
             initEventTag();
-        }
+        }*/
     }
 
-    private void initEventTag() {
+    /*private void initEventTag() {
         Label eventLabel = new Label("E");
         eventLabel.setStyle("-fx-text-fill: black; -fx-background-color: white; -fx-font-family: Arial; -fx-font-weight: bold;");
         eventTag.getChildren().add(eventLabel);
-    }
+    }*/
 
-    private void initRecurTag() {
+    /*private void initRecurTag() {
         //recurringTag.getChildren().add(new Label("Recurring"));
         recurringTag.setStyle("-fx-background-color: #ff884c;");
         //recurringTag.setStyle("-fx-background-blend-mode: multiply;");
         
-    }
+    }*/
 
     private void initTags(ReadOnlyTask task) {
         task.getTags().forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
