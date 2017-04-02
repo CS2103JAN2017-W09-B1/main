@@ -72,14 +72,14 @@ public class CommandBox extends UiPart<Region> {
      */
     private void setStyleToIndicateCommandFailure() {
         final ScheduledExecutorService exec = Executors.newScheduledThreadPool(1);
-        
-        exec.schedule(new Runnable(){
+
+        exec.schedule(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 commandTextField.getStyleClass().remove(ERROR_STYLE_CLASS);
                 }
             }, 1, TimeUnit.SECONDS);
         commandTextField.getStyleClass().add(ERROR_STYLE_CLASS);
-        }
+    }
 
 }

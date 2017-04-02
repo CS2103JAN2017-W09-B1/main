@@ -82,7 +82,7 @@ public class TaskCard extends UiPart<Region> {
     private void initTags(ReadOnlyTask task) {
         task.getTags().forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
     }
-    
+
     private void expandTaskCard() {
         indivTask.setExpanded(true);
     }
