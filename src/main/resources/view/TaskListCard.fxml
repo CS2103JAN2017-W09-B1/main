@@ -15,7 +15,7 @@
     <children>
       <FlowPane fx:id="overdueTag" HBox.hgrow="ALWAYS">
          <children>
-            <TitledPane expanded="false" maxWidth="500.0" minWidth="490.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" stylesheets="@DarkTheme.css" wrapText="true">
+            <TitledPane maxWidth="500.0" minWidth="490.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" stylesheets="@DarkTheme.css" wrapText="true">
                <content>
                     <GridPane maxWidth="420.0" minHeight="60.0" minWidth="420.0" translateX="-15.0">
                         <columnConstraints>
@@ -52,7 +52,7 @@
                               <HBox maxWidth="500.0">
                                  <children>
                                              <Label fx:id="id" minWidth="30.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-family: Arial; -fx-font-size: 24; -fx-font-weight: bold;" styleClass="cell_big_label" HBox.hgrow="ALWAYS" />
-                                             <Label fx:id="title" maxWidth="450.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 24; -fx-font-family: Arial; -fx-font-weight: bold;" styleClass="cell_big_label" text="\$first" wrapText="true" />
+                                             <Label fx:id="title" maxWidth="400.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 24; -fx-font-family: Arial; -fx-font-weight: bold;" styleClass="cell_big_label" text="\$first" wrapText="true" HBox.hgrow="ALWAYS" />
                                     <FlowPane fx:id="eventTag" maxWidth="10.0" prefWrapLength="30.0" styleClass="events" stylesheets="@DarkTheme.css" translateY="5.0" />
                                     <FlowPane fx:id="recurringTag" maxWidth="10.0" prefWrapLength="30.0" styleClass="events" translateX="3.0" translateY="5.0" />
                                  </children>
