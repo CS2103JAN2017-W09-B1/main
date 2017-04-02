@@ -2,6 +2,7 @@ package seedu.address.ui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
@@ -31,6 +32,8 @@ public class TaskCard extends UiPart<Region> {
     private FlowPane eventTag;
     @FXML
     private FlowPane overdueTag;
+    @FXML
+    private TitledPane indivTask;
 
     public TaskCard(ReadOnlyTask task, int displayedIndex) {
         super(FXML);
@@ -78,5 +81,9 @@ public class TaskCard extends UiPart<Region> {
 
     private void initTags(ReadOnlyTask task) {
         task.getTags().forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
+    }
+    
+    private void expandTaskCard() {
+        indivTask.setExpanded(true);
     }
 }
