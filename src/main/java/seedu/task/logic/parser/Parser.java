@@ -6,9 +6,7 @@ import static seedu.task.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import seedu.task.commons.exceptions.IllegalValueException;
 import seedu.task.logic.commands.AddCommand;
-import seedu.task.logic.commands.CalCommand;
 import seedu.task.logic.commands.Command;
 import seedu.task.logic.commands.CompleteCommand;
 import seedu.task.logic.commands.DeleteCommand;
@@ -114,9 +112,6 @@ public class Parser {
 
         case UseCommand.COMMAND_WORD:
             return new UseCommand(arguments);
-
-        case CalCommand.COMMAND_WORD:
-            return new CalCommand(arguments);
 
         default:
             return new IncorrectCommand(MESSAGE_UNKNOWN_COMMAND);
