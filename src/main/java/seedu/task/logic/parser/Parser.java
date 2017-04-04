@@ -26,6 +26,7 @@ import seedu.task.logic.commands.SelectCommand;
 import seedu.task.logic.commands.UndoCommand;
 import seedu.task.logic.commands.UnrevertCommand;
 import seedu.task.logic.commands.UseCommand;
+import seedu.task.logic.commands.CalCommand;
 
 /**
  * Parses user input.
@@ -112,6 +113,9 @@ public class Parser {
 
         case UseCommand.COMMAND_WORD:
             return new UseCommand(arguments);
+
+        case CalCommand.COMMAND_WORD:
+            return new CalCommand(arguments);
 
         default:
             return new IncorrectCommand(MESSAGE_UNKNOWN_COMMAND);
