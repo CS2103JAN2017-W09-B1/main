@@ -181,7 +181,6 @@ public class ModelManager extends ComponentManager implements Model {
     public void indicateTaskManagerFilePathChanged(String filePath) throws DataConversionException, IOException {
         TaskManagerStorage storage = new XmlTaskManagerStorage(filePath);
         Optional<ReadOnlyTaskManager> tempTaskManager = storage.readTaskManager();
-        // Raises StorageFilePathChangedEvent if no Exception is thrown.
         raise(new StorageFilePathChangedEvent(filePath));
         if (tempTaskManager.isPresent()) {
             initTaskManager(tempTaskManager.get());
@@ -189,7 +188,6 @@ public class ModelManager extends ComponentManager implements Model {
             updateTaskListPredicate();
             setCurrentComparator(ListCommand.COMPARATOR_NAME_PRIORITY);
         } else {
-            // Creates new storage file if not exists.
             raise(new TaskManagerChangedEvent(this.currentTaskManager));
         }
     }
