@@ -19,6 +19,7 @@ public class CalCommand extends Command {
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Returns a date in EEE, MMM d yyyy HH:mm format. "
             + "Parameters: DAY\n"
+            + "DAY must contain some date.\n"
             + "Example: " + COMMAND_WORD + " Sunday";
 
     private final String date;
