@@ -23,6 +23,9 @@ import seedu.task.commons.exceptions.DataConversionException;
 import seedu.task.commons.exceptions.IllegalValueException;
 import seedu.task.commons.util.CollectionUtil;
 import seedu.task.logic.commands.ListCommand;
+import seedu.task.model.commandmap.CommandMap.BaseCommandNotAllowedAsAliasException;
+import seedu.task.model.commandmap.CommandMap.OriginalCommandNotFoundException;
+import seedu.task.model.tag.Tag;
 import seedu.task.model.tag.UniqueTagList;
 import seedu.task.model.task.ReadOnlyTask;
 import seedu.task.model.task.Task;
@@ -84,20 +87,43 @@ public class ModelManager extends ComponentManager implements Model {
 
     //@@author A0144813J
     private void initModel(ReadOnlyTaskManager taskManager) {
-        this.taskManagerStates = new ArrayList<TaskManager>();
-        this.taskManagerStates.add(new TaskManager(taskManager));
-        this.currentTaskManagerStateIndex = 0;
-        this.currentTaskManager = new TaskManager(this.taskManagerStates.get(this.currentTaskManagerStateIndex));
+        this.currentTaskManager = new TaskManager();
+        initTaskManager(taskManager);
         setCurrentPredicateToShowAllTasks();
         initializeTaskLists();
         updateTaskListPredicate();
         setCurrentComparator(ListCommand.COMPARATOR_NAME_PRIORITY);
     }
 
+    private void initTaskManager(ReadOnlyTaskManager taskManager) {
+        this.currentTaskManager.resetData(taskManager);
+        this.taskManagerStates = new ArrayList<TaskManager>();
+        this.taskManagerStates.add(new TaskManager(taskManager));
+        this.currentTaskManagerStateIndex = 0;
+    }
+
     private void initializeTaskLists() {
         this.nonFloatingTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
         this.floatingTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
         this.completedTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
+    }
+
+    @Override
+    public String translateCommand(String original) {
+        return this.currentTaskManager.translateCommand(original);
+    }
+
+    @Override
+    public void addCommandAlias(String alias, String original) throws OriginalCommandNotFoundException,
+            BaseCommandNotAllowedAsAliasException {
+        this.currentTaskManager.addCommandAlias(alias, original);
+        recordCurrentStateOfTaskManager();
+        indicateTaskManagerChanged();
+    }
+
+    @Override
+    public String getCommandMapString() {
+        return this.currentTaskManager.getCommandMapString();
     }
 
     public void setCurrentComparator(String type) {
@@ -158,14 +184,19 @@ public class ModelManager extends ComponentManager implements Model {
     //@@author A0144813J
     @Override
     public void indicateTaskManagerFilePathChanged(String filePath) throws DataConversionException, IOException {
-        raise(new StorageFilePathChangedEvent(filePath));
         TaskManagerStorage storage = new XmlTaskManagerStorage(filePath);
         Optional<ReadOnlyTaskManager> tempTaskManager = storage.readTaskManager();
+        // Raises StorageFilePathChangedEvent if no Exception is thrown.
+        raise(new StorageFilePathChangedEvent(filePath));
         if (tempTaskManager.isPresent()) {
-            this.currentTaskManager.resetData(tempTaskManager.get());
-            initModel(this.currentTaskManager);
+            initTaskManager(tempTaskManager.get());
+            setCurrentPredicateToShowAllTasks();
+            updateTaskListPredicate();
+            setCurrentComparator(ListCommand.COMPARATOR_NAME_PRIORITY);
+        } else {
+            // Creates new storage file if not exists.
+            raise(new TaskManagerChangedEvent(this.currentTaskManager));
         }
-        raise(new TaskManagerChangedEvent(this.currentTaskManager));
     }
 
     @Override
@@ -521,7 +552,20 @@ public class ModelManager extends ComponentManager implements Model {
     private class FuzzyFinder {
 
         public boolean check(ReadOnlyTask task, Set<String> nameKeyWords) {
-            return nameKeyWords.stream()
+            boolean isTagMatching = false;
+            UniqueTagList tagList = task.getTags();
+            boolean tempIsTagMatching;
+            for (Tag tag : tagList.internalList) {
+                tempIsTagMatching = nameKeyWords.stream()
+                        .filter(keyword -> fuzzyFind(tag.tagName.toLowerCase(), keyword.toLowerCase()))
+                        .findAny()
+                        .isPresent();
+                isTagMatching |= tempIsTagMatching;
+                if (tempIsTagMatching) {
+                    break;
+                }
+            }
+            return isTagMatching || nameKeyWords.stream()
                     .filter(keyword -> fuzzyFind(task.getTitle().title.toLowerCase(), keyword.toLowerCase()))
                     .findAny()
                     .isPresent();
