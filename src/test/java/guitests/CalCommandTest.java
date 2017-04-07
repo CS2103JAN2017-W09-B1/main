@@ -1,7 +1,9 @@
 package guitests;
 
 import static seedu.task.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+
 import org.junit.Test;
+
 import seedu.task.logic.commands.CalCommand;
 
 public class CalCommandTest extends TaskManagerGuiTest {

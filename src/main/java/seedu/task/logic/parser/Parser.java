@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import seedu.task.logic.commands.AddCommand;
+import seedu.task.logic.commands.CalCommand;
 import seedu.task.logic.commands.Command;
 import seedu.task.logic.commands.CompleteCommand;
 import seedu.task.logic.commands.DeleteCommand;
@@ -26,7 +27,6 @@ import seedu.task.logic.commands.SelectCommand;
 import seedu.task.logic.commands.UndoCommand;
 import seedu.task.logic.commands.UnrevertCommand;
 import seedu.task.logic.commands.UseCommand;
-import seedu.task.logic.commands.CalCommand;
 
 /**
  * Parses user input.
