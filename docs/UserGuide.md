@@ -568,8 +568,8 @@ A: Check if the config file in data/json/config.json contains the correct file p
 | Commands | Format | Description |
 | -------- | ------ | ----------- |
 | **add** | **add &lt;title&gt;**<br/> add Buy apples<br/> **add &lt;title&gt; for: &lt;deadline&gt;**<br/> add Buy oranges for: end of this week<br/> **add &lt;title&gt; for: &lt;start of deadline&gt; to &lt;end of deadline&gt;**<br/> add Buy pears for: Christmas from 6pm to 12am<br/> **add &lt;title&gt; for: every &lt;day&gt;**<br/> add Buy potatoes for: every Monday<br/> **add &lt;title&gt; priority: &lt;1 to 5&gt;**<br/> add Buy mangoes priority: 2<br/> **add &lt;title&gt; note: &lt;instructions&gt;**<br/> add Buy Burdens note: I have to get it<br/> **add &lt;title&gt; #&lt;tag&gt;…**<br/> add Buy almonds #healthyliving | Adds a task in Burdens |
-| **aliases**| **aliases** | shows all created aliases|
-| **cal**| **cal &lt;day&gt;** | shows the date of the day field|
+| **aliases**| **aliases** | Shows all created aliases|
+| **cal**| **cal &lt;day&gt;** | Shows the date of the day field|
 | **cd** | **cd &lt;path\to\file.xml&gt;**<br/> cd C:\Users\Default\Desktop\myCalendar.xml<br/> **cd &lt;path\to\file.json&gt;**<br/> cd C:\Users\Default\Desktop\myCalendar.json | Changes the directory of data |
 | **complete** | **complete &lt;index&gt;**<br/> complete 1<br/> **complete floating &lt;index&gt;**<br/> complete floating 1 | Marks a task as complete |
 | **delete** | **delete &lt;index&gt;**<br/> delete 3<br/> **delete &lt;column&gt; &lt;index&gt;**<br/> delete completed 4delete floating 2 | Deletes a task from Burdens |
