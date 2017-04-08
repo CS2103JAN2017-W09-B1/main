@@ -20,10 +20,11 @@ By : `TEAM W09-B1`  &nbsp;&nbsp;&nbsp;&nbsp; Since: `Mar 2017`  &nbsp;&nbsp;&nbs
      3.13. [Specifying the data storage location](#313-specifying-the-data-storage-location--use)<br/>
      3.14. [Import as Google Calendar file](#314-import-as-google-calendar-file--import)<br/>
      3.15. [Export as Google Calendar file](#315-export-as-google-calendar-file--export)<br/>
-     3.16. [Save](#316-saving-the-data)<br/>
-     3.17. [Reset](#317-resetting-burdens--reset)<br/>
-     3.18. [Help](#318-viewing-help--help)<br/>
-     3.19. [Exit](#319-exiting-the-program--exit)<br/>
+     3.16. [Use an alias](#316-using-an-alias--use)<br />
+     3.17. [Save](#317-saving-the-data)<br/>
+     3.18. [Reset](#318-resetting-burdens--reset)<br/>
+     3.19. [Help](#319-viewing-help--help)<br/>
+     3.20. [Exit](#320-exiting-the-program--exit)<br/>
 4. [FAQ](#4-faq)
 5. [Command Summary](#5-command-summary)
 
@@ -90,16 +91,17 @@ Let's begin to add a task to Burdens.
 Here are the **allowed formats**:
 
 * `add <title>` - adds a floating task with the title to Burdens.
-* `add <title> for: <deadline>` - adds a task which have to be done by the specified deadline. Please use the keyword `for: `.
+* `add <title> for: <deadline>` - adds a task which has to be done by the specified deadline. Please use the keyword `for: `.
 * `add <title> for: <start of deadline> to <end of deadline>` - adds an event which will take place between start and end of the deadline. Note the keyword `for:` and `to`.
+* `add <title> for: every <day>` - adds a recurring task which has to be done by the specific deadline.
 * `add <title> priority: <1 to 5>` - adds a floating task with a priority level.
 * `add <title> note: <instructions>` - adds a floating task with instructions.
-* `add <title> #<tag>` - adds a floating task with a tag. Note that you can have multiple tags.
+* `add <title> #<tag>...` - adds a floating task with a tag. Note that you can have multiple tags.
 For full details of each parameter, please view their formats in their respective sections below.
 
 The full allowed command format is therefore:
 
-* `add <title> for:<deadline> priority:<priority level> note:<instructions> #<tag>`
+* `add <title> for:<deadline> priority:<priority level> note:<instructions> #<tag>...`
 
 #### Date Time Format
 Let us show you the parameters to fill for `<start of deadline>` and `<end of deadline>`.
@@ -293,7 +295,7 @@ Here are the **allowed formats**:
 
 * `select <index>` - selects a task at the particular index in the `Ongoing` square.
 * `select floating <index>` - selects a task at the particular index in the `Floating` square.
-* `select completed <index>` - selects a task the particular
+* `select completed <index>` - selects a task at the particular index in the `Completed` square.
 
 Note:
 
@@ -389,7 +391,7 @@ Here is the **allowed format**:
 
 * `unrevert` - undo the revert to the state when Burdens was last edited.
 
-### 3.13 Specifying the data storage location : `use`
+### 3.13 Specifying the data storage location : `cd`
 
 Want to personalise where you save the data file of Burdens?
 
@@ -398,22 +400,22 @@ Let's begin to change the directory of the save file.
 Here are the **allowed formats**:
 
 For all users Macintosh and Windows alike:
-* `use <path\to\file.xml>` - changes the directory to the file path stated after the command for data
-* `use <path\to\file.json>` - changes the directory to the file path stated after the command for user preference
+* `cd <path\to\file.xml>` - changes the directory to the file path stated after the command for data.
+* `cd <path\to\file.json>` - changes the directory to the file path stated after the command for user preference.
 
 Note:
 
 * A valid file path must be provided.
 
-### 3.14. Import as Google Calender file : `import`
+### 3.14. Import as Google Calendar file : `import`
 
 Want to import a Google Calendar file into Burdens?
 
 Let's begin to import the file.
 
-Here are the **allowed formats**:
+Here is the **allowed format**:
 
-* `import <filename>.ics` - imports a Google calendar file into Burdens
+* `import <path\to\file\filename>.ics` - imports a Google calendar file into Burdens.
 
 Note:
 
@@ -426,15 +428,41 @@ Want to export Burden's task as a Google Calendar file?
 
 Let's begin to export the file.
 
-Here are the **allowed formats**:
+Here is the **allowed format**:
 
-* `export <filename>.ics` - exports a Google calendar file into Burdens
+* `export <path\to\file\filename>.ics` - exports a Google calendar file into Burdens.
 
 Note:
 
 * A valid file name must be provided.
 
-### 3.16. Saving the data
+### 3.16. Using an alias : `use`
+
+Want to change the default commands?
+
+This command will allow you to customize your very own commands in Burdens!
+
+Here are the **allowed formats**:
+
+* `use <your command> for <original command>` - creates a command which can be used for the original command.
+* `use <your new command> for <your old command>` - creates a new command which can be used for the original command.
+
+Note:
+
+* The new command used for the current command can only be a word.
+
+Let us show you some *examples*:
+```
+I want to have a command `create` for `add`.
+> Command: use create for add
+Result: Burdens will accept `create` and it can be used in the same way as `add`.
+
+I want to have a command `make` for `create`.
+> Command: use make for create
+Result: Burdens will accept `make` and it can be used in the same way as `ad`.
+```
+
+### 3.17. Saving the data
 
 Want to save what you have done for Burdens?
 
@@ -442,7 +470,7 @@ All data are saved in the hard disk automatically after any command that changes
 
 There is no need to save manually.
 
-### 3.17. Resetting Burdens : `reset`
+### 3.18. Resetting Burdens : `reset`
 
 Want a fresh start for Burdens?
 
@@ -457,7 +485,7 @@ Note:
 * This process cannot be undone when Burdens is closed. Be sure to
   undo before data is irreversibly lost.
 
-### 3.18. Viewing help : `help`
+### 3.19. Viewing help : `help`
 
 Need help?
 
@@ -477,7 +505,7 @@ Note:
 * You can type a command on it's own too to jog your memory of the fields
   required to complete the command
 
-### 3.19. Exiting the program : `exit`
+### 3.20. Exiting the program : `exit`
 
 Saying goodbye to Burdens?
 
