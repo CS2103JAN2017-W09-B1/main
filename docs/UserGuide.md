@@ -402,8 +402,8 @@ Let's begin to change the directory of the save file.
 Here are the **allowed formats**:
 
 For all users Macintosh and Windows alike:
-* `cd <path\to\file.xml>` - changes the directory to the file path stated after the command for data.
-* `cd <path\to\file.json>` - changes the directory to the file path stated after the command for user preference.
+* `cd <path\to\file\filename>.xml` - changes the directory to the file path stated after the command for data.
+* `cd <path\to\filename>.json` - changes the directory to the file path stated after the command for user preference.
 
 Note:
 
@@ -426,7 +426,7 @@ Note:
 
 ### 3.15. Export as Google Calendar file : `export`
 
-Want to export Burden's task as a Google Calendar file?
+Want to export tasks in Burdens as a Google Calendar file?
 
 Let's begin to export the file.
 
@@ -444,7 +444,7 @@ Want to change the default commands?
 
 This command will allow you to customize your very own commands in Burdens!
 
-Let's beign to create an alias in Burdens.
+Let's begin to create an alias in Burdens.
 
 Here are the **allowed formats**:
 
@@ -580,7 +580,7 @@ A: Check if the config file in data/json/config.json contains the correct file p
 | **help** | **help** | Loads the help page of Burdens |
 | **import** | **import &lt;path\to\file\filename&gt;.ics**<br/> import C:\Users\Default\Desktop\myCalendar.ics | Imports an .ics file into Burdens |
 | **incomplete** | **incomplete &lt;index&gt;**<br/> incomplete 2 | Marks a task as incomplete |
-| **list** | **list**<br/> ** list &lt;types&gt;**<br/> list date<br/>list priority<br/>list title<br/> | List all tasks in a certain order |
+| **list** | **list**<br/> **list &lt;types&gt;**<br/> list date<br/>list priority<br/>list title<br/> | List all tasks in a certain order |
 | **redo** | **redo** | Redo a command |
 | **reset** | **reset** | Clears all tasks in Burdens |
 | **revert** | **revert** | Brings Burdens back to the state when it was first initiated |
