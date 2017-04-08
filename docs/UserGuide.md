@@ -20,12 +20,13 @@ By : `TEAM W09-B1`  &nbsp;&nbsp;&nbsp;&nbsp; Since: `Mar 2017`  &nbsp;&nbsp;&nbs
      3.13. [Specifying the data storage location](#313-specifying-the-data-storage-location--use)<br/>
      3.14. [Import as Google Calendar file](#314-import-as-google-calendar-file--import)<br/>
      3.15. [Export as Google Calendar file](#315-export-as-google-calendar-file--export)<br/>
-     3.16. [Use an alias](#316-using-an-alias--use)<br />
-     3.17. [Show the day and date](#317-showing-the-day-and-date--cal)<br/>
-     3.18. [Save](#318-saving-the-data)<br/>
-     3.19. [Reset](#319-resetting-burdens--reset)<br/>
-     3.20. [Help](#320-viewing-help--help)<br/>
-     3.21. [Exit](#321-exiting-the-program--exit)<br/>
+     3.16. [Use an alias](#316-using-an-alias--use)<br/>
+     3.17  [Show all aliases](#317-show-all-aliases--aliases)<br/>
+     3.18. [Show the day and date](#318-showing-the-day-and-date--cal)<br/>
+     3.19. [Save](#319-saving-the-data)<br/>
+     3.20. [Reset](#320-resetting-burdens--reset)<br/>
+     3.21. [Help](#321-viewing-help--help)<br/>
+     3.22. [Exit](#322-exiting-the-program--exit)<br/>
 4. [FAQ](#4-faq)
 5. [Command Summary](#5-command-summary)
 
@@ -443,6 +444,8 @@ Want to change the default commands?
 
 This command will allow you to customize your very own commands in Burdens!
 
+Let's beign to create an alias in Burdens.
+
 Here are the **allowed formats**:
 
 * `use <your command> for <original command>` - creates a command which can be used for the original command.
@@ -464,7 +467,17 @@ I want to have a command "make" for "create".
 Result: Burdens will accept "make" and it can be used in the same way as "add".
 ```
 
-### 3.17. Showing the day and date : `cal`
+### 3.17. Show all aliases : `aliases`
+
+When you have changed your commands, you might want to keep track of them.
+
+Let's begin to show all the aliases that you have created in Burdens.
+
+Here is the **allowed format**:
+
+* `aliases`
+
+### 3.18. Showing the day and date : `cal`
 
 Forgot the date or lazy to find a calendar?
 
@@ -474,7 +487,7 @@ Here is the **allowed format**:
 
 * `cal <day>` - shows the day and date.
 
-### 3.18. Saving the data
+### 3.19. Saving the data
 
 Want to save what you have done for Burdens?
 
@@ -482,7 +495,7 @@ All data are saved in the hard disk automatically after any command that changes
 
 There is no need to save manually.
 
-### 3.19. Resetting Burdens : `reset`
+### 3.20. Resetting Burdens : `reset`
 
 Want a fresh start for Burdens?
 
@@ -497,7 +510,7 @@ Note:
 * This process cannot be undone once Burdens is closed. Be sure to
   undo before data is irreversibly lost.
 
-### 3.20. Viewing help : `help`
+### 3.21. Viewing help : `help`
 
 Need help?
 
@@ -516,7 +529,7 @@ Note:
 * You can type a command on its own too to jog your memory of the fields
   required to complete the command
 
-### 3.21. Exiting the program : `exit`
+### 3.22. Exiting the program : `exit`
 
 Saying goodbye to Burdens?
 
@@ -529,13 +542,27 @@ Here is the **allowed format**:
 # 4. FAQ
 
 Q: How do I transfer my data to another Computer?
-
 A: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous To Do Manager folder.
 
 Q: Do I require knowledge of command line to use this program?
-
 A: No prior command line knowledge is required to use **Burdens**. Instead, just follow the instructions under [Features](https://github.com/CS2103JAN2017-W09-B1/main/blob/master/docs/UserGuide.md#features).
+
+Q: Why did Burdens show invalid file directory when I put a valid file path?
+A: Check if the directory you wish to relocate to exists and if you have enough administrator privileges.
+
+Q: Can Burdens remind me when my task is due soon?
+A:Not at the moment. Burdens will always show the tasks that are of the highest priority at the top of list. However, Burdens will not show you a reminder (yet).
+
+Q: Why did Burdens reject my alias for a command?
+A: You should check if the alias is part of the original commands as Burdens do not allow an alias of those.
+
+Q: Why did Burdens show in the result display that the task already exists?
+A: You have previously created a task with the same title, deadline and priority.
+
+
+Q: I can't launch Burdens. What is wrong?
+A: Check if the config file in data/json/config.json contains the correct file paths to other data such as your to-do list. It might be helpful to delete the user preferences file.
 
 # 5. Command Summary
 
-I will photoshop this section for a table that will summarise all the commands.
+<img src="images/CommandSummary.png" width="600">
