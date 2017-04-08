@@ -403,7 +403,7 @@ Here are the **allowed formats**:
 
 For all users Macintosh and Windows alike:
 * `cd <path\to\file\filename>.xml` - changes the directory to the file path stated after the command for data.
-* `cd <path\to\filename>.json` - changes the directory to the file path stated after the command for user preference.
+* `cd <path\to\file\filename>.json` - changes the directory to the file path stated after the command for user preference.
 
 Note:
 
