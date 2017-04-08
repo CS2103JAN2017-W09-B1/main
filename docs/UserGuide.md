@@ -21,10 +21,11 @@ By : `TEAM W09-B1`  &nbsp;&nbsp;&nbsp;&nbsp; Since: `Mar 2017`  &nbsp;&nbsp;&nbs
      3.14. [Import as Google Calendar file](#314-import-as-google-calendar-file--import)<br/>
      3.15. [Export as Google Calendar file](#315-export-as-google-calendar-file--export)<br/>
      3.16. [Use an alias](#316-using-an-alias--use)<br />
-     3.17. [Save](#317-saving-the-data)<br/>
-     3.18. [Reset](#318-resetting-burdens--reset)<br/>
-     3.19. [Help](#319-viewing-help--help)<br/>
-     3.20. [Exit](#320-exiting-the-program--exit)<br/>
+     3.17. [Show the day and date](#317-showing-the-day-and-date--cal)<br/>
+     3.18. [Save](#318-saving-the-data)<br/>
+     3.19. [Reset](#319-resetting-burdens--reset)<br/>
+     3.20. [Help](#320-viewing-help--help)<br/>
+     3.21. [Exit](#321-exiting-the-program--exit)<br/>
 4. [FAQ](#4-faq)
 5. [Command Summary](#5-command-summary)
 
@@ -449,7 +450,9 @@ Here are the **allowed formats**:
 
 Note:
 
+* You can have an alias for all original commands in Burdens.
 * The new command used for the current command can only be a word.
+* Do not use these keywords as your new command: "for" and "use".
 
 Let us show you some *examples*:
 ```
@@ -462,7 +465,17 @@ I want to have a command "make" for "create".
 Result: Burdens will accept "make" and it can be used in the same way as "add".
 ```
 
-### 3.17. Saving the data
+### 3.17. Showing the day and date : `cal`
+
+Forgot the date or lazy to find a calendar?
+
+This command can help you find the day and date easily!
+
+Here is the **allowed format**:
+
+* `cal <day>` - shows the day and date.
+
+### 3.18. Saving the data
 
 Want to save what you have done for Burdens?
 
@@ -470,7 +483,7 @@ All data are saved in the hard disk automatically after any command that changes
 
 There is no need to save manually.
 
-### 3.18. Resetting Burdens : `reset`
+### 3.19. Resetting Burdens : `reset`
 
 Want a fresh start for Burdens?
 
@@ -485,7 +498,7 @@ Note:
 * This process cannot be undone once Burdens is closed. Be sure to
   undo before data is irreversibly lost.
 
-### 3.19. Viewing help : `help`
+### 3.20. Viewing help : `help`
 
 Need help?
 
@@ -504,7 +517,7 @@ Note:
 * You can type a command on its own too to jog your memory of the fields
   required to complete the command
 
-### 3.20. Exiting the program : `exit`
+### 3.21. Exiting the program : `exit`
 
 Saying goodbye to Burdens?
 
