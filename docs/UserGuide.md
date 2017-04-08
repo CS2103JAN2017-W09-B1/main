@@ -475,7 +475,7 @@ Let's begin to show all the aliases that you have created in Burdens.
 
 Here is the **allowed format**:
 
-* `aliases`
+* `aliases` - shows all the aliases.
 
 ### 3.18. Showing the day and date : `cal`
 
