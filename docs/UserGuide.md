@@ -453,13 +453,13 @@ Note:
 
 Let us show you some *examples*:
 ```
-I want to have a command `create` for `add`.
+I want to have a command "create" for "add".
 > Command: use create for add
-Result: Burdens will accept `create` and it can be used in the same way as `add`.
+Result: Burdens will accept "create" and it can be used in the same way as "add".
 
-I want to have a command `make` for `create`.
+I want to have a command "make" for "create".
 > Command: use make for create
-Result: Burdens will accept `make` and it can be used in the same way as `ad`.
+Result: Burdens will accept "make" and it can be used in the same way as "add".
 ```
 
 ### 3.17. Saving the data
@@ -514,8 +514,6 @@ Let's begin to exit Burdens.
 Here is the **allowed format**:
 
 * `exit` - exits Burdens.
-
-Format: `exit`
 
 # 4. FAQ
 
