@@ -58,7 +58,7 @@ As shown, there will be some sample tasks to give you a sense of what your tasks
 
 You will see four sections:
 
-- Ongoing: Shows a list of ongoing tasks with deadlines. Recurring tasks will be in red.
+- Ongoing: Shows a list of ongoing tasks with deadlines. Recurring tasks will have a tag "R" attached to it.
 - Floating: Shows a list of tasks without deadlines.
 - Completed: Shows a list of completed tasks.
 - Command: Displays the results of a command and contains the command box.
