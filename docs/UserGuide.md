@@ -452,7 +452,6 @@ Note:
 
 * You can have an alias for all original commands in Burdens.
 * The new command used for the current command can only be a word.
-* Do not use these keywords as your new command: "for" and "use".
 
 Let us show you some *examples*:
 ```
