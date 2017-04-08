@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskmanager>
+    <tasks>
+        <title>Taste watermelons</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste waffles</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy quinces</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy orange tarts</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste kiwis</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste ice cream sandwiches</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy elderberries</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy cupcakes</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>5</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get nougats</title>
+        <date>floating</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get pineapples</title>
+        <date>floating</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat jackfruits</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat honeycombs</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get durians</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get bonbons</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat vanilla beans</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat unsalted popcorns</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>4</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste oranges</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste marshmellows</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy imbes</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy gingerbreads</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste coconuts</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste almonds</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy ugnis</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy tiramisus</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>3</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get froyos</title>
+        <date>floating</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get honeydews</title>
+        <date>floating</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat bananas</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat zuchinnis</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat zeppoles</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get tangerines</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get swiss rolls</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat nectarines</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat lollipops</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>2</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste grapes</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste eclairs</title>
+        <date>Sun, Apr 9 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy apples</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy yangmeis</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy yule logs</title>
+        <date>Mon, Apr 10 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste strawberries</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Taste red velvet cakes</title>
+        <date>Wed, Apr 12 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy mangoes</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Buy kitkats</title>
+        <date>Fri, Apr 14 2017 21:24</date>
+        <priority>1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get xango mangosteens</title>
+        <date>floating</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get xtremes</title>
+        <date>floating</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat rambutans</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat petit fours</title>
+        <date>Tue, Apr 11 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get lemons</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Get jellybeans</title>
+        <date>Thu, Apr 13 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat figs</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tasks>
+        <title>Eat donuts</title>
+        <date>Sat, Apr 15 2017 21:24</date>
+        <priority>-1</priority>
+        <instruction>Cheap offers</instruction>
+        <tagged>groceries</tagged>
+    </tasks>
+    <tags>groceries</tags>
+    <commandMap>&lt;root/&gt;</commandMap>
+</taskmanager>
