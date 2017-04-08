@@ -551,12 +551,12 @@ Q: Why did **Burdens** show invalid file directory when I put a valid file path?
 A: Check if the directory you wish to relocate to exists and if you have enough administrator privileges.
 
 Q: Can **Burdens** remind me when my task is due soon?<br/>
-A:Not at the moment. **Burdens** will always show the tasks that are of the highest priority at the top of list. However, **Burdens** will not show you a reminder (yet).
+A: Not at the moment. **Burdens** will always show the tasks that are of the highest priority at the top of list. However, **Burdens** will not show you a reminder (yet).
 
 Q: Why did **Burdens** reject my alias for a command?<br/>
-A: You should check if the alias is part of the original commands as **Burdens** do not allow an alias of those.
+A: You should check if the alias is part of the original commands as **Burdens** does not allow an alias of those.
 
-Q: Why did **Burdens** show in the result display that the task already exists?
+Q: Why did **Burdens** show in the result display that the task already exists?<br />
 A: You have previously created a task with the same title, deadline and priority.
 
 
