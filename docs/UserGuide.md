@@ -39,7 +39,7 @@ Enter **Burdens**.<br/>
 A task manager that structures your tasks and deadlines<br/>
 using your keyboard commands with a beautiful interface.<br/>
 <br/>
-Read on and discover how to install and use **Burdens**<br/>
+Read on to discover how to install and use **Burdens**<br/>
 to make sense of your daily life activities.<br/>
 <br/>
 No more **burdens**.
@@ -61,9 +61,9 @@ You will see four sections:
 - Ongoing: Shows a list of ongoing tasks with deadlines. Recurring tasks will be in red.
 - Floating: Shows a list of tasks without deadlines.
 - Completed: Shows a list of completed tasks.
-- Command: Displays the results of a command and the contains the command box.
+- Command: Displays the results of a command and contains the command box.
 
-Each square has the own respective lists and indexes.
+Each square has their own respective lists and indexes.
 
 Type a command in the command box and press <kbd>Enter</kbd> to execute it.
 
@@ -77,7 +77,7 @@ To use Burdens effectively, we need to master the following commands.
 
 > ### Commands
 > **Please note the following:**
-> * Commands words are case-sensitive, please follow the command summary.
+> * Command words are case-sensitive, please follow the command summary.
 > * Words with a colon `:` at the end are keywords.
 > * Items in `<Angle Brackets>` are parameters.
 > * Items with `...` after them can have multiple instances.
@@ -93,7 +93,7 @@ Here are the **allowed formats**:
 * `add <title>` - adds a floating task with the title to Burdens.
 * `add <title> for: <deadline>` - adds a task which has to be done by the specified deadline. Please use the keyword `for: `.
 * `add <title> for: <start of deadline> to <end of deadline>` - adds an event which will take place between start and end of the deadline. Note the keyword `for:` and `to`.
-* `add <title> for: every <day>` - adds a recurring task which has to be done by the specific deadline.
+* `add <title> for: every <day>` - adds a recurring task which has to be done by the specified deadline.
 * `add <title> priority: <1 to 5>` - adds a floating task with a priority level.
 * `add <title> note: <instructions>` - adds a floating task with instructions.
 * `add <title> #<tag>...` - adds a floating task with a tag. Note that you can have multiple tags.
@@ -177,7 +177,7 @@ Result: Burdens will add this task to the "Ongoing: square and
 
 ### 3.2. Deleting a task : `delete`
 
-Cleared a burden? You can eliminate it by using the `delete` a command.
+Cleared a burden? You can eliminate it by using the `delete` command.
 
 Let's begin to delete a task from Burdens.
 
@@ -202,7 +202,7 @@ Result: Burdens will delete this task from the "Completed" square.
 
 ### 3.3. Editing a task : `edit`
 
-Want to rectify something that was not right? Changed dates?
+Want to rectify something that is not right? Changed dates?
 
 Burdens allows you to edit your tasks at any field, at any square.
 
@@ -240,7 +240,7 @@ Result: Burdens will edit the instructions of the second task to vegetables
 
 One simply has too much to do. At the crucial moments, you need to find something fast.
 
-Naturally, Burdens allows you to find a task in a few ways quickly.
+Naturally, Burdens allows you to find a task quickly in a few ways.
 
 Let's begin to find a task in Burdens.
 
@@ -430,7 +430,7 @@ Let's begin to export the file.
 
 Here is the **allowed format**:
 
-* `export <path\to\file\filename>.ics` - exports a Google calendar file into Burdens.
+* `export <path\to\file\filename>.ics` - exports a Google calendar file from Burdens.
 
 Note:
 
@@ -482,7 +482,7 @@ Here is the **allowed format**:
 
 Note:
 
-* This process cannot be undone when Burdens is closed. Be sure to
+* This process cannot be undone once Burdens is closed. Be sure to
   undo before data is irreversibly lost.
 
 ### 3.19. Viewing help : `help`
@@ -495,14 +495,13 @@ Let's begin to help.
 
 Here is the **allowed format**:
 
-* `help` - loads the help page that will pop up.
+* `help` - loads the pop up help page.
 
 Note:
 
 * If an incorrect command is entered, the result display will display a
-  help message regarding the incorrect command. This is provided if the
-  command is typed correctly.
-* You can type a command on it's own too to jog your memory of the fields
+  help message regarding the incorrect command.
+* You can type a command on its own too to jog your memory of the fields
   required to complete the command
 
 ### 3.20. Exiting the program : `exit`
