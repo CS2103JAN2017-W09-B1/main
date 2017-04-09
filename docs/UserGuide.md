@@ -584,7 +584,7 @@ A: Check if the config file in data/json/config.json contains the correct file p
 | **redo** | **redo** | Redo a command |
 | **reset** | **reset** | Clears all tasks in Burdens |
 | **revert** | **revert** | Brings Burdens back to the state when it was first initiated |
-| **select** | **select &lt;index&gt;**<br/> select 3<br/>**select &lt;column&gt; &lt;index&gt;**<br/> select floating 1<br/>select completed 1 | Expands the task to show additional details |
+| **select** | **select &lt;index&gt;**<br/> select 3<br/>**select &lt;column&gt; &lt;index&gt;**<br/> select floating 1<br/>select completed 1 | Highlights the specified task |
 | **undo** | **undo** | Undo a command |
 | **unrevert** | **unrevert** | Reverses the command &quot;revert&quot; |
 | **use** | **use &lt;your command&gt; for &lt;original command&gt;**<br/> use create for add<br/> **use &lt;your new command&gt; for &lt;your old command&gt;**<br/> use make for create | Creates an alias for a command |
