@@ -37,5 +37,11 @@
   [Java FX tutorial](http://code.makery.ch/library/javafx-8-tutorial/) by *Marco Jakob*.
 * Some parts of this application is also inspired by the excellent SE-EDU initiative at
   (https://github.com/se-edu/)
+* This application utilizes the awesome [Pretty Time NLP](https://github.com/ocpsoft/prettytime)
+  by *OCPsoft* for its date-time natural language processing.
+* This application uses the powerful [iCal4j](https://github.com/ical4j/ical4j) by *Ben Fortuna*
+  for its iCalendar conversion feature.
+* This application also applies the versatile [Xstream library](http://x-stream.github.io/index.html)
+  by *Joe Walnes* and *Jorg Schaible* in XML data conversion.
 
 #### Licence : [MIT](LICENSE)
