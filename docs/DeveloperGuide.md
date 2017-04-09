@@ -46,6 +46,8 @@ You are welcome to contribute in any way!
 Please ensure you have the following prerequisites before contributing to development:
 
 1. **JDK `1.8.0_60`**  or later
+   > Having any Java 8 version is not enough.<br>
+     This app will not work with earlier versions of Java 8.
 2. **Eclipse** IDE<br>
 3. **e(fx)clipse** plugin for Eclipse (Follow from Steps 2 onwards given in<br>
    [this page](http://www.eclipse.org/efxclipse/install.html#for-the-ambitious))<br>
@@ -54,18 +56,18 @@ Please ensure you have the following prerequisites before contributing to develo
 
 ### 1.2 Importing Project Burdens into Eclipse
 
-0. Fork this repository, and clone the fork to your computer
-1. Open Eclipse <br/>
-   [Note: **e(fx)clipse** and **buildship** plugins must be installed as given in 2.1 Prerequisites]
-2. Click `File` > `Import`
-3. Click `Gradle` > `Gradle Project` > `Next` > `Next`
-4. Click `Browse`, then locate the project's directory
-5. Click `Finish`
+1. Fork this repository, and clone the fork to your computer
+2. Open Eclipse <br/>
+   [Note: **e(fx)clipse** and **buildship** plugins must be installed as given in 1.1 Prerequisites]
+3. Click `File` > `Import`
+4. Click `Gradle` > `Gradle Project` > `Next` > `Next`
+5. Click `Browse`, then locate the project's directory
+6. Click `Finish`
 
   > * If you are asked whether to 'keep' or 'overwrite' config files, choose to 'keep'.
   > * Depending on connection speed and server load, it can take up to 30 minutes for the setup to finish
       [Gradle downloads library files from servers during the project setup]
-  > * During the import process, Eclipse might change settings automatically, you can safely discard those changes.
+  > * If Eclipse changed any settings automatically, you can safely discard those changes.
 
 ### 1.3 Configuring Checkstyle
 1. Click `Project` -> `Properties` -> `Checkstyle` -> `Local Check Configurations` -> `New...`
@@ -125,17 +127,17 @@ The ['UI'](#22-ui-component) component handles display interactions on screen su
 The ['Logic'](#23-logic-component) component handles the process and execution of user's commands.<br/>
 <br/>
 **`Model`**<br/>
-The ['Model'](#24-model-component) handles data representation and data structures of Burdens.<br/>
+The ['Model'](#24-model-component) component handles data representation and data structures of Burdens.<br/>
 <br/>
 **`Storage`**<br/>
-The ['Storage'](#25-storage-component) handles the process of reading data from and writing data to the hard disk.<br/>
+The ['Storage'](#25-storage-component) component handles the process of reading data from and writing data to the hard disk.<br/>
 <br/>
-Each of the ** `UI` , `Logic`, `Model`, `Storage`** components:
+Each of the **`UI` , `Logic`, `Model`, `Storage`** components:
 
 * Defines its _API_ in an `interface` with the same name as the Component.
 * Exposes its functionality using a `{Component Name}Manager` class.
 
-For example, the `Logic` component (see the class diagram given below) defines it's API in the `Logic.java`
+For example, the `Logic` component (see the class diagram given below) defines its API in the `Logic.java`
 interface and exposes its functionality using the `LogicManager.java` class.<br>
 <p align="center">
    <img src="images/LogicClassDiagram.png" width="800"><br>
@@ -162,6 +164,7 @@ being saved to the hard disk and the status bar of the UI being updated to refle
    <img src="images\SDforDeletePersonEventHandling.png" width="800"><br>
    Figure 2.1.3b : Component interactions for `delete 1` command (part 2)
 </p>
+
 >Note how the event is propagated through the `EventsCenter` to the `Storage` and `UI` without `Model` having
   to be coupled to either of them. This is an example of how this Event Driven approach helps us reduce direct
   coupling between components.
@@ -186,8 +189,8 @@ The `UI` component:
 * Responds to events raised from various parts of the App and updates the UI accordingly.
 
 ### 2.3 Logic component
-'Logic' provides several APIs for UI to execute the commands entered by the user.<br>
-'Logic' obtains information about the tasklist to render to the user.
+`Logic` provides several APIs for `UI` to execute the commands entered by the user.<br>
+`Logic` obtains information about the tasklist to render to the user.
 <p align="center">
    <img src="images/LogicClassDiagram.png" width="800"><br>
    Figure 2.3.1 : Structure of the Logic Component
@@ -197,8 +200,8 @@ The `UI` component:
 
 The `Logic` component:
 * uses the `Parser` class to parse the user command follwing which a `Command` object is executed by the `LogicManager`.
-* invokes command execution that can affect the `Model` (e.g. adding a person) and/or raise events.
-* encapsulates a `CommandResult` object which is passed back to the `Ui`.
+* invokes command execution that can affect the `Model` (e.g. adding a task) and/or raise events.
+* encapsulates a `CommandResult` object which is passed back to the `UI`.
 
 Given below is the Sequence Diagram for interactions within the `Logic` component for the `execute("delete 1")`
 API call.<br>
@@ -208,7 +211,7 @@ API call.<br>
 </p>
 
 ### 2.4 Model component
-`Model` manages and stores Burdens's tasklist data and user's preferences. <br>
+`Model` manages and stores Burdens' tasklist data and user's preferences. <br>
 `Model` exposes an UnmodifiableObservableList<ReadOnlyTask> that can be 'observed' by other components<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. the UI can be bound to this list and will automatically update when the data in the list change.
 <p align="center">
@@ -297,13 +300,13 @@ We have two types of tests:
 
 2. **Non-GUI Tests** - These are tests not involving the GUI. They include,
    1. _Unit tests_ targeting the lowest level methods/classes. <br>
-      e.g. `seedu.address.commons.UrlUtilTest`
+      e.g. `seedu.task.commons.UrlUtilTest`
    2. _Integration tests_ that are checking the integration of multiple code units
      (those code units are assumed to be working).<br>
-      e.g. `seedu.address.storage.StorageManagerTest`
+      e.g. `seedu.task.storage.StorageManagerTest`
    3. Hybrids of unit and integration tests. These test are checking multiple code units as well as
       how the are connected together.<br>
-      e.g. `seedu.address.logic.LogicManagerTest`
+      e.g. `seedu.task.logic.LogicManagerTest`
 
 #### Headless GUI Testing
 Thanks to the [TestFX](https://github.com/TestFX/TestFX) library we use,
@@ -722,6 +725,7 @@ Use case ends.
 ## Appendix E : Product Survey
 
 **Trello**
+
 Author: Johann Wong Jun Guo
 
 Pros:
@@ -741,6 +745,7 @@ Cons:
 * Unable to work offline
 
 **Wunderlist**
+
 Author: Nguyen Quoc Bao
 
 Pros:
@@ -764,6 +769,7 @@ Cons:
 * New users might not know how to use the advanced features e.g. creating recurring tasks
 
 **Google Keep**
+
 Author: Gerald Wong Wei Chuen
 
 Pros:
@@ -781,6 +787,7 @@ Cons:
 * Lack of CLI functionality or NLP for text parsing of dates
 
 **Remember The Milk**
+
 Author: Lee Wan Qing
 
 Pros:
@@ -799,6 +806,3 @@ Cons:
 * Very confusing for a new user due to functions hidden behind small buttons with icons that are not very intuitive.
 * Lots of information is hidden in the UI which requires the user to click on each task individually in order to view them
 * Offline mode is only available to paying users
-
-
-
