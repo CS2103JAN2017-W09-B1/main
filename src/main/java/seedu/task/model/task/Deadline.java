@@ -12,7 +12,7 @@ import org.ocpsoft.prettytime.nlp.parse.DateGroup;
 import seedu.task.commons.exceptions.IllegalValueException;
 
 /**
- * Represents a Task's date in the task manager.
+ * Represents a Task's deadline in the task manager.
  * Guarantees: immutable; is valid as declared in {@link #isValidDate(String)}
  *
  */

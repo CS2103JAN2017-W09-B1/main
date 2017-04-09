@@ -21,6 +21,9 @@ import seedu.task.model.task.ReadOnlyTask;
 import seedu.task.model.task.Task;
 import seedu.task.model.task.Title;
 
+/**
+ * Converts Task object into VEvent object.
+ */
 public class IcsTaskAdapter {
 
     private static TimeZoneRegistry registry = TimeZoneRegistryFactory.getInstance().createRegistry();

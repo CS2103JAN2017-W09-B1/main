@@ -5,6 +5,9 @@ import java.util.Comparator;
 
 import seedu.task.model.task.ReadOnlyTask;
 
+/**
+ * Comparator class responsible for sorting of task list based on Title.
+ */
 public class TaskTitleComparator implements Comparator<ReadOnlyTask> {
 
     @Override

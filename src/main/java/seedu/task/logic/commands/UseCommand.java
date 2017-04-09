@@ -7,7 +7,8 @@ import seedu.task.commons.exceptions.DataConversionException;
 import seedu.task.logic.commands.exceptions.CommandException;
 
 /**
- * Changes the path of the storage file.
+ * Changes the path of the storage file or user preferences file
+ * used by Burdens.
  */
 public class UseCommand extends Command {
 

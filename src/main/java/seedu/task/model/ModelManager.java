@@ -86,6 +86,10 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     //@@author A0144813J
+    /*
+     * Initializes model's attributes: task manager, task lists for
+     * display and their default predicates and comparators.
+     */
     private void initModel(ReadOnlyTaskManager taskManager) {
         this.currentTaskManager = new TaskManager();
         initTaskManager(taskManager);
@@ -95,6 +99,10 @@ public class ModelManager extends ComponentManager implements Model {
         setCurrentComparator(ListCommand.COMPARATOR_NAME_PRIORITY);
     }
 
+    /**
+     * Initializes task manager object with specified task manager
+     * value. Also initializes list of task manager states.
+     */
     private void initTaskManager(ReadOnlyTaskManager taskManager) {
         this.currentTaskManager.resetData(taskManager);
         this.taskManagerStates = new ArrayList<TaskManager>();
@@ -102,17 +110,28 @@ public class ModelManager extends ComponentManager implements Model {
         this.currentTaskManagerStateIndex = 0;
     }
 
+    /**
+     * Initializes floating, non-floating and completed task lists
+     * for display.
+     */
     private void initializeTaskLists() {
         this.nonFloatingTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
         this.floatingTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
         this.completedTasks = new FilteredList<>(this.currentTaskManager.getTaskList());
     }
 
+    /**
+     * Translates the given command string to the on it is mapped
+     * to in CommandMap.
+     */
     @Override
     public String translateCommand(String original) {
         return this.currentTaskManager.translateCommand(original);
     }
 
+    /**
+     * Maps an alias string with an existing command string.
+     */
     @Override
     public void addCommandAlias(String alias, String original) throws OriginalCommandNotFoundException,
             BaseCommandNotAllowedAsAliasException {
@@ -121,11 +140,17 @@ public class ModelManager extends ComponentManager implements Model {
         indicateTaskManagerChanged();
     }
 
+    /**
+     * Gets a string representation of the CommandMap for display.
+     */
     @Override
     public String getCommandMapString() {
         return this.currentTaskManager.getCommandMapString();
     }
 
+    /**
+     * Applies the specified comparator to task manager.
+     */
     public void setCurrentComparator(String type) {
         switch (type) {
         case ListCommand.COMPARATOR_NAME_DATE:
@@ -391,6 +416,10 @@ public class ModelManager extends ComponentManager implements Model {
         String toString();
     }
     //@@author A0144813J
+    /**
+     * Qualifier class responsible for filtering floating task list
+     * based on tags.
+     */
     private class TagFloatingTaskQualifier implements Qualifier {
         private UniqueTagList tagList;
 
@@ -406,6 +435,10 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    /**
+     * Qualifier class responsible for filtering non-floating task list
+     * based on tags.
+     */
     private class TagNonFloatingTaskQualifier implements Qualifier {
         private UniqueTagList tagList;
 
@@ -421,6 +454,10 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    /**
+     * Qualifier class responsible for filtering completed task list
+     * based on tags.
+     */
     private class TagCompletedTaskQualifier implements Qualifier {
         private UniqueTagList tagList;
 
@@ -436,6 +473,10 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    /**
+     * Qualifier class responsible for filtering floating task list
+     * based on date.
+     */
     private class DateFloatingTaskQualifier implements Qualifier {
         private Date date;
 
@@ -451,6 +492,10 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    /**
+     * Qualifier class responsible for filtering non-floating task list
+     * based on date.
+     */
     private class DateNonFloatingTaskQualifier implements Qualifier {
         private Date date;
 
@@ -466,6 +511,10 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    /**
+     * Qualifier class responsible for filtering completed task list
+     * based on date.
+     */
     private class DateCompletedTaskQualifier implements Qualifier {
         private Date date;
 
@@ -577,6 +626,10 @@ public class ModelManager extends ComponentManager implements Model {
     }
     //@@author
     //@@author A0144813J
+    /**
+     * Qualifier class responsible for filtering task list
+     * based on task type floating.
+     */
     private class TaskIsFloatingQualifier implements Qualifier {
 
         @Override
@@ -586,6 +639,10 @@ public class ModelManager extends ComponentManager implements Model {
 
     }
 
+    /**
+     * Qualifier class responsible for filtering task list
+     * based on task type non-floating.
+     */
     private class TaskIsNotFloatingQualifier implements Qualifier {
 
         @Override
@@ -595,6 +652,10 @@ public class ModelManager extends ComponentManager implements Model {
 
     }
 
+    /**
+     * Qualifier class responsible for filtering task list
+     * based on task type completed.
+     */
     private class TaskIsCompleteQualifier implements Qualifier {
 
         @Override

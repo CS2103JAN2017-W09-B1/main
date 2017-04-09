@@ -5,6 +5,9 @@ import seedu.task.logic.commands.exceptions.CommandException;
 import seedu.task.model.commandmap.CommandMap.BaseCommandNotAllowedAsAliasException;
 import seedu.task.model.commandmap.CommandMap.OriginalCommandNotFoundException;
 
+/**
+ * Command class responsible for adding an alias to an existing command.
+ */
 public class AliasCommand extends Command {
 
     public static final String COMMAND_WORD = "use";
@@ -25,6 +28,9 @@ public class AliasCommand extends Command {
     private final String originalCommandString;
     private final String aliasCommandString;
 
+    /**
+     * Creates an Alias command.
+     */
     public AliasCommand(String alias, String original) {
         this.aliasCommandString = alias;
         this.originalCommandString = original;

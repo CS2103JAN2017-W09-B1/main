@@ -6,6 +6,9 @@ import java.util.Date;
 
 import seedu.task.model.task.ReadOnlyTask;
 
+/**
+ * Comparator class responsible for sorting of task list based on Deadline.
+ */
 public class TaskDeadlineComparator implements Comparator<ReadOnlyTask> {
 
     @Override

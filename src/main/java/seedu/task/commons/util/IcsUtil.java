@@ -13,12 +13,12 @@ import net.fortuna.ical4j.model.Calendar;
 import net.fortuna.ical4j.validate.ValidationException;
 
 /**
- * Helps with reading from and writing to XML files.
+ * Helps with reading from and writing to ICS files.
  */
 public class IcsUtil {
 
     /**
-     * Returns the ics data in the file as an object of the specified type.
+     * Returns data in the specified ics file as an object of the specified type.
      *
      * @param path           Points to a valid ics file containing calendar data.
      *                       Cannot be null.
@@ -38,7 +38,7 @@ public class IcsUtil {
     }
 
     /**
-     * Saves the tasks in the task manager in ics format.
+     * Saves the tasks in the task manager in iCal file format.
      *
      * @param path Points to a valid path to the intended iCal file.
      *             Cannot be null.
