@@ -564,28 +564,4 @@ Q: I can't launch **Burdens**. What is wrong?<br/>
 A: Check if the config file in data/json/config.json contains the correct file paths to other data such as your to-do list. It might be helpful to delete the user preferences file.
 
 # 5. Command Summary
-
-| Commands | Format | Description |
-| -------- | ------ | ----------- |
-| **add** | **add &lt;title&gt;**<br/> add Buy apples<br/> **add &lt;title&gt; for: &lt;deadline&gt;**<br/> add Buy oranges for: end of this week<br/> **add &lt;title&gt; for: &lt;start of deadline&gt; to &lt;end of deadline&gt;**<br/> add Buy pears for: Christmas from 6pm to 12am<br/> **add &lt;title&gt; for: every &lt;day&gt;**<br/> add Buy potatoes for: every Monday<br/> **add &lt;title&gt; priority: &lt;1 to 5&gt;**<br/> add Buy mangoes priority: 2<br/> **add &lt;title&gt; note: &lt;instructions&gt;**<br/> add Buy Burdens note: I have to get it<br/> **add &lt;title&gt; #&lt;tag&gt;…**<br/> add Buy almonds #healthyliving | Adds a task in Burdens |
-| **aliases**| **aliases** | Shows all created aliases|
-| **cal**| **cal &lt;day&gt;** | Shows the date of the day field|
-| **cd** | **cd &lt;path\to\file.xml&gt;**<br/> cd C:\Users\Default\Desktop\myCalendar.xml<br/> **cd &lt;path\to\file.json&gt;**<br/> cd C:\Users\Default\Desktop\myCalendar.json | Changes the directory of data |
-| **complete** | **complete &lt;index&gt;**<br/> complete 1<br/> **complete floating &lt;index&gt;**<br/> complete floating 1 | Marks a task as complete |
-| **delete** | **delete &lt;index&gt;**<br/> delete 3<br/> **delete &lt;column&gt; &lt;index&gt;**<br/> delete completed 4delete floating 2 | Deletes a task from Burdens |
-| **edit** | **edit &lt;index&gt;**<br/> edit 3<br/> **edit &lt;index&gt; for: &lt;new date&gt;**<br/> edit 3 for: Sunday<br/> **edit &lt;index&gt; for: &lt;new start time&gt; to &lt;new end time&gt;**<br/> edit 3 for: today 5pm to 7pm<br/> **edit &lt;index&gt; for: every &lt;new day&gt;**<br/> edit 3 for: every Saturday<br/> **edit &lt;index&gt; &lt;new title&gt;**<br/> edit 3 Buy oranges<br/> **edit &lt;index&gt; priority: &lt;new priority&gt;**<br/> edit 3 priority: 5<br/> **edit &lt;index&gt; note: &lt;new note&gt;**<br/> edit 5 note: Buy from supermarket<br/> **edit &lt;index&gt; #&lt;new tag&gt;…**<br/> edit 5 #healthyliving #detox #100daysoffitness #fitspo<br/> **edit &lt;column&gt; &lt;index&gt; for: &lt;new date&gt; priority: &lt;new priority&gt; #&lt;new tag&gt;…**<br/> edit floating 5 for: Saturday to Friday priority: 4 #healthyliving #detox | Edits the details of a task in Burdens |
-| **exit** | **exit** | Exits Burdens |
-| **export** | **export &lt;path\to\file\filename&gt;.ics**<br/> export C:\Users\Default\Desktop\myCalendar.ics | Exports the data file from Burdens into an .ics file |
-| **find** | **find &lt;title&gt;**<br/> find Buy apples<br/> **find #&lt;tag&gt;**<br/> find #fruits | Finds a task in Burdens |
-| **help** | **help** | Loads the help page of Burdens |
-| **import** | **import &lt;path\to\file\filename&gt;.ics**<br/> import C:\Users\Default\Desktop\myCalendar.ics | Imports an .ics file into Burdens |
-| **incomplete** | **incomplete &lt;index&gt;**<br/> incomplete 2 | Marks a task as incomplete |
-| **list** | **list**<br/> **list &lt;types&gt;**<br/> list date<br/>list priority<br/>list title<br/> | List all tasks in a certain order |
-| **redo** | **redo** | Redo a command |
-| **reset** | **reset** | Clears all tasks in Burdens |
-| **revert** | **revert** | Brings Burdens back to the state when it was first initiated |
-| **select** | **select &lt;index&gt;**<br/> select 3<br/>**select &lt;column&gt; &lt;index&gt;**<br/> select floating 1<br/>select completed 1 | Highlights the specified task |
-| **undo** | **undo** | Undo a command |
-| **unrevert** | **unrevert** | Reverses the command &quot;revert&quot; |
-| **use** | **use &lt;your command&gt; for &lt;original command&gt;**<br/> use create for add<br/> **use &lt;your new command&gt; for &lt;your old command&gt;**<br/> use make for create | Creates an alias for a command |
-
+<img src="images/commandsummarytable.jpg">
