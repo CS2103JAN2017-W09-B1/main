@@ -1,3 +1,4 @@
+//@@author A0142644J
 package seedu.task.logic.commands;
 
 import java.util.List;
@@ -8,7 +9,6 @@ import seedu.task.model.task.ReadOnlyTask;
 import seedu.task.model.task.Task;
 import seedu.task.model.task.UniqueTaskList;
 
-//@@author A0142644J
 /**
  * Marks an existing task in the task manager as incomplete.
  */

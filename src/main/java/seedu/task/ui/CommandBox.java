@@ -67,6 +67,7 @@ public class CommandBox extends UiPart<Region> {
         commandTextField.getStyleClass().remove(ERROR_STYLE_CLASS);
     }
 
+    //@@author A0142644J
     /**
      * Sets the command box style to indicate a failed command.
      */
@@ -81,5 +82,6 @@ public class CommandBox extends UiPart<Region> {
             }, 1, TimeUnit.SECONDS);
         commandTextField.getStyleClass().add(ERROR_STYLE_CLASS);
     }
+    //@@author
 
 }

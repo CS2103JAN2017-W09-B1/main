@@ -7,7 +7,6 @@ import java.util.Map;
 
 import seedu.task.logic.commands.AddCommand;
 import seedu.task.logic.commands.AliasCommand;
-import seedu.task.logic.commands.CalCommand;
 import seedu.task.logic.commands.CompleteCommand;
 import seedu.task.logic.commands.DeleteCommand;
 import seedu.task.logic.commands.EditCommand;
@@ -22,7 +21,6 @@ import seedu.task.logic.commands.RedoCommand;
 import seedu.task.logic.commands.ResetCommand;
 import seedu.task.logic.commands.RevertCommand;
 import seedu.task.logic.commands.SelectCommand;
-import seedu.task.logic.commands.ShowAliasCommand;
 import seedu.task.logic.commands.UndoCommand;
 import seedu.task.logic.commands.UnrevertCommand;
 import seedu.task.logic.commands.UseCommand;
@@ -63,8 +61,6 @@ public class CommandMap {
         commandWords.add(RevertCommand.COMMAND_WORD);
         commandWords.add(UnrevertCommand.COMMAND_WORD);
         commandWords.add(UseCommand.COMMAND_WORD);
-        commandWords.add(CalCommand.COMMAND_WORD);
-        commandWords.add(ShowAliasCommand.COMMAND_WORD);
 
         return commandWords;
     }

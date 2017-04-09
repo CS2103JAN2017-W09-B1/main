@@ -1,3 +1,4 @@
+//@@author A0142644J
 package guitests;
 
 import static org.junit.Assert.assertTrue;
@@ -10,7 +11,6 @@ import seedu.task.logic.commands.IncompleteCommand;
 import seedu.task.testutil.TestTask;
 import seedu.task.testutil.TestUtil;
 
-//@@author A0142644J
 public class IncompleteCommandTest extends TaskManagerGuiTest {
 
     TestTask[] originalTaskList = td.getTypicalTasks();

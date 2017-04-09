@@ -35,6 +35,7 @@ public class MainWindow extends UiPart<Region> {
     private Stage primaryStage;
     private Logic logic;
 
+    //@@author A0142644J
     // Independent Ui parts residing in this Ui container
     //private BrowserPanel browserPanel;
     private TaskListPanel nonFloatingTaskListPanel;
@@ -84,6 +85,7 @@ public class MainWindow extends UiPart<Region> {
 
         registerAsAnEventHandler(this);
     }
+    //@@author
 
     public Stage getPrimaryStage() {
         return primaryStage;
@@ -119,6 +121,7 @@ public class MainWindow extends UiPart<Region> {
         });
     }
 
+    //@@author A0142644J
     void fillInnerParts() {
         nonFloatingTaskListPanel = new TaskListPanel(
                 getNonFloatingTaskListPlaceholder(),
@@ -160,6 +163,7 @@ public class MainWindow extends UiPart<Region> {
     private AnchorPane getCompletedTaskListPlaceholder() {
         return completedTaskListPanelPlaceholder;
     }
+    //@@author
 
     void hide() {
         primaryStage.hide();
@@ -220,6 +224,7 @@ public class MainWindow extends UiPart<Region> {
         raise(new ExitAppRequestEvent());
     }
 
+    //@@author A0142644J
     public TaskListPanel getNonFloatingTaskListPanel() {
         return this.nonFloatingTaskListPanel;
     }
@@ -231,4 +236,6 @@ public class MainWindow extends UiPart<Region> {
     public TaskListPanel getCompletedTaskListPanel() {
         return this.completedTaskListPanel;
     }
+    //@@author
+
 }
